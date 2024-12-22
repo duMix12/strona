@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <title>JEBAĆ PIS</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<link rel="stylesheet" href="czwarty.css">
+    </head>
+<body>
+    <div id="tło">
+        <video autoplay muted loop id="bg">
+            <source src="New York Christmas  _ 4K video with Christmas songs !.mp4" type="video/mp4">
+            </video>
+            <div class="main">
+                <video id="film" src="po_edycji/pyt3.mp4" type="video/mp4" controls></video>
+            </div>
+    <script>
+        function validateAnswer() {
+            // Pobieramy odpowiedź z pola tekstowego
+            var answer = document.getElementById("answer").value.trim();
+
+            // Poprawna odpowiedź (można dostosować do swoich potrzeb)
+            var correctAnswer = "Saute";
+
+            // Sprawdzamy, czy odpowiedź użytkownika jest poprawna
+            if (answer === "") {
+                alert("Proszę odpowiedzieć na pytanie.");
+                return false;  // Zatrzymujemy przejście na kolejną stronę
+            } else if (answer.toLowerCase() !== correctAnswer.toLowerCase()) {
+                alert("Podpowiedź: nazwa pochodzi z języka francuskiego, zaczyna się na literę S");
+                return false;  // Zatrzymujemy przejście na kolejną stronę
+            }
+
+            // Jeśli odpowiedź jest poprawna, przekierowujemy na następną stronę
+            window.location.href = "5.html";  
+            return false;  // Zatrzymuje domyślne działanie formularza
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateAnswer()">
+        <input type="text" id="answer" name="answer" required>
+        <input type="submit" class="guzik" value="SPRAWDŹ">
+    </form>
+</div>
+
+  
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <title>JEBAĆ PIS</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<link rel="stylesheet" href="siedemnasty.css">
+    </head>
+<body>
+    <div class="tło">
+        <video autoplay muted loop id="bg">
+            <source src="t17.mp4" type="video/mp4">
+            </video>
+            <div class="main">
+                <video id="film" src="po_edycji/pyt16.mp4" type="video/mp4" controls></video>
+            </div>
+    <script>
+        function validateAnswer() {
+            // Pobieramy odpowiedź z pola tekstowego
+            var answer = document.getElementById("answer").value.trim();
+
+            // Poprawna odpowiedź (można dostosować do swoich potrzeb)
+            var correctAnswer = "imadło";
+
+            // Sprawdzamy, czy odpowiedź użytkownika jest poprawna
+            if (answer === "") {
+                alert("Proszę odpowiedzieć na pytanie.");
+                return false;  // Zatrzymujemy przejście na kolejną stronę
+            } else if (answer.toLowerCase() !== correctAnswer.toLowerCase()) {
+                alert("PODPOWIEDŹ: służy przede wszystkim do chwycenia i unieruchomienia elementu, dzięki czemu możliwe jest jego dalsze obrabiania");
+                return false;  // Zatrzymujemy przejście na kolejną stronę
+            }
+
+            // Jeśli odpowiedź jest poprawna, przekierowujemy na następną stronę
+            window.location.href = "18.html";  
+            return false;  // Zatrzymuje domyślne działanie formularza
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateAnswer()">
+        <input type="text" id="answer" name="answer" required>
+        <input type="submit" class="guzik" value="SPRAWDŹ">
+    </form>
+</div>
+
+  
+
+</body>
+</html>
